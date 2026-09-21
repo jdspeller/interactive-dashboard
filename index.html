@@ -13,6 +13,10 @@
 <body>
     <div class="container">
     <div class="row">
+        
+
+            
+        </div>
             <div class="col" id="weekly-tasks">
         <form>
             <div>
@@ -37,6 +41,30 @@
         <p id="goal-message"></p>
         <script src="js/task-manager.js"></script>
     </div>
+    <div class="col" id="metric-converter">
+            <h3>Imperial/Metric Converter</h3>
+            <form id="converter-form">
+                <label for="conversion-value">Value:</label>
+                <input type="number" id="conversion-value" placeholder="Enter number" required>
+
+                <label for="conversion-type">Convert to:</label>
+                <select id="conversion-type">
+                    <option value="in-to-cm">Inches to Centimeters</option>
+                    <option value="cm-to-in">Centimeters to Inches</option>
+                    <option value="ft-to-m">Feet to Meters</option>
+                    <option value="m-to-ft">Meters to Feet</option>
+                    <option value="yd-to-m">Yards to Meters</option>
+                    <option value="m-to-yd">Meters to Yards</option>
+                    <option value="mi-to-km">Miles to Kilometers</option>
+                    <option value="km-to-mi">Kilometers to Miles</option>
+                </select>
+                
+                
+                <button type="button" id="convert-btn">Convert</button>
+            </form>
+            <div id="conversion-output"></div>
+
+            <script src="metric-converter.js" defer></script>
 </div>
 </body>
 </html>
