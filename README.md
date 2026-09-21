@@ -16,10 +16,9 @@ The Imperial/Metric Converter application lets users to convert measurements bet
 ### Logic and Psuedocode 
 
 function metricConverter() {
-    // Prompt the user for a numeric value and parse it as a decimal
-    let userValue = parseFloat(prompt("Enter the numeric value to convert:"));
+     let userValue = parseFloat(prompt("Enter the numeric value to convert:"));
     
-    // Validate that the user entered a valid number
+    
     if (isNaN(userValue)) {
         alert("Please enter a valid numeric value.");
         return;
@@ -55,8 +54,8 @@ function metricConverter() {
 
     if (isValid) {
         alert("The converted value is: " + result.toFixed(2));
+        metricConverter();
     }
 }
 
-// Execute the converter function
-metricConverter();
+
