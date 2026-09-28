@@ -59,3 +59,7 @@ function metricConverter() {
 }
 
 
+## Magic Eight Ball
+A fun random-response game component intergrated into the dashboard layout
+<h2>Features</h2>
+Validates user form inputs using JavaScript string trimming, hooks up specific events via visual target nodes that are interactive and manage stating display values across the dynamic caluculation.
