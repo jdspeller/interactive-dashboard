@@ -1,2 +1,31 @@
-// Put your JavaScript code in this file
+const answers = [
+    "It is certain.",
+    "Reply hazy, try again.",
+    "Don't count on it.",
+    "Outlook good.",
+    "Most likely.",
+    "My sources say no."
+];
+
+function displayAnswer() {
+    let index = Math.floor(Math.random() * answers.length);
+    let circleDiv = document.getElementById("circle");
+    
+    circleDiv.innerHTML = answers[index];
+    circleDiv.style.display = "block";
+}
+
+document.getElementById("ball").addEventListener("mousedown", function() {
+    let questionField = document.getElementById("question");
+    
+    if (questionField.value.trim() === "") {
+        alert("Please enter a question first!");
+    } else {
+        displayAnswer();
+    }
+});
+
+document.getElementById("reset").addEventListener("click", function() {
+    document.getElementById("circle").style.display = "none";
+});
 
