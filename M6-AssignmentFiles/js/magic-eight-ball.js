@@ -22,3 +22,7 @@ document.getElementById("ball").addEventListener("mousedown", function() {
         displayAnswer();
     }
 });
+
+document.getElementById("reset").addEventListener("click", function() {
+    document.getElementById("circle").style.display = "none";
+});
