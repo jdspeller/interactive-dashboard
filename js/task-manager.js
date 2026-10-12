@@ -1,14 +1,16 @@
-function weeklyGoal(userName, dailyGoal, bonusTasks) {
-let calculatedWeeklyGoal = dailyGoal * 5;
-let totalGoal = Number(calculatedWeeklyGoal) + Number(bonusTasks);
-let output = `Hello ${userName}! Your daily target is ${dailyGoal} tasks. With a weekly baseline of ${calculatedWeeklyGoal} tasks and ${bonusTasks} bonus tasks, your total weekly goal is ${totalGoal} tasks.`;
-document.getElementById("goal-message").innerHTML = output;
-}
-
-document.getElementById("goal-btn").addEventListener("click", function(event) {
-event.preventDefault();
-    let user = document.getElementById("userName").value;
-    let daily = document.getElementById("dailyGoal").value;
-    let bonus = document.getElementById("bonusTasks").value;
-    weeklyGoal(user, daily, bonus);
+let myTasks = [];
+let userTasksList = document.createElement("ul");
+userTasksList.id = "user-tasks";
+document.getElementById("task-list").appendChild(userTasksList);
+document.getElementById("add-task").addEventListener("click", function() {
+    let taskInput = document.getElementById("task-name");
+    let taskText = taskInput.value;
+    if (taskText.trim() !== "") {
+        myTasks.push(taskText);
+        let li = document.createElement("li");
+        li.textContent = taskText;
+        userTasksList.appendChild(li);
+        taskInput.value = "";
+    }
 });
+
